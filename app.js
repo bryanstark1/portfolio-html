@@ -1,6 +1,6 @@
 $(() => {
   $(".mobile-menu").on('click', () => {
-    $(".mobile-menu-expanded").slideToggle("slow");
+    $(".navigation-menu").slideToggle("slow");
     $('article').css('opacity', '0.6')
   });
 });

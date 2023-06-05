@@ -46,11 +46,12 @@ header {
 
 .header-title > p:first-of-type {
   font-weight: 600;
+  /* color: #716A5C; */
 }
 
-.header-title > .mobile-subtitle {
+.header-title > .mobile-subtitle > i {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #716A5C;
 }
 
@@ -60,17 +61,58 @@ header {
   margin-top: 0.4rem;
 }
 
-.mobile-menu-expanded {
+.navigation-menu {
   display: none;
   background-color: #F1E9DB;
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
 }
 /* MOBILE MENU END*/
 ul {
+  display: flex;
   list-style: none;
+  padding: 0;
+}
+
+ul.main-links {
+  margin-bottom: 1.5rem;
+  flex-direction: column;
+
+}
+
+ul.extra-links {
+  margin-bottom: 1.5rem;
+  gap: 2rem;
+  justify-content: space-evenly;
+}
+
+.main-links>li {
+  border-bottom: 1px solid rgba(113, 106, 92, .2); /* Variation of #716A5C to reduce opacity of border*/
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.extra-links>li {
+
 }
 
 li > a {
   text-decoration: none;
+  color: #716A5C;
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 /* HEADER END */
 
+
+/* 
+
+DESKTOP MEDIA QUERY
+
+https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
+@media only screen and (min-width: 992px) {
+  /* HEADER START */
+  .mobile-menu {
+    display: none;
+  }
+}

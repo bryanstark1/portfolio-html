@@ -21,6 +21,7 @@ body {
 
 /* HEADER */
 header {
+  z-index: 999;
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
@@ -28,6 +29,7 @@ header {
   align-items: center;
   background-color: #F1E9DB;
   height: 5rem;
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
 }
 
 .header-title {
@@ -60,6 +62,7 @@ header {
 
 .mobile-menu-expanded {
   display: none;
+  background-color: #F1E9DB;
 }
 /* MOBILE MENU END*/
 ul {

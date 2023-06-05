@@ -1,3 +1,73 @@
-body {
-  
+/* 
+COLORS
+Black = #07020D = rgb(7, 2, 13)
+Aero = #5DB7DE
+Alabaster = #F1E9DB
+Khaki = #A39B8B
+Dim Grey = #716A5C
+https://coolors.co/07020d-5db7de-f1e9db-a39b8b-716a5c
+*/
+
+* {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #07020D;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F1E9DB;
+  height: 5rem;
+}
+
+.header-title {
+  display: flex;
+  font-size: 2em;
+  margin-left: 1rem;
+  align-items: baseline;
+  gap: .35em;
+}
+
+.header-title > p {
+  margin: 0;
+}
+
+.header-title > p:first-of-type {
+  font-weight: 600;
+}
+
+.header-title > .mobile-subtitle {
+  font-weight: 300;
+  font-size: 24px;
+  color: #716A5C;
+}
+
+/* MOBILE MENU START*/
+.mobile-menu {
+  margin-right: 20px;
+  margin-top: 0.4rem;
+}
+
+.mobile-menu-expanded {
+  display: none;
+}
+/* MOBILE MENU END*/
+ul {
+  list-style: none;
+}
+
+li > a {
+  text-decoration: none;
+}
+/* HEADER END */
+

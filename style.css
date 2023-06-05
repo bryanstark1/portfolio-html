@@ -8,26 +8,34 @@ Dim Grey = #716A5C
 https://coolors.co/07020d-5db7de-f1e9db-a39b8b-716a5c
 */
 
+
 * {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: #07020D;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100%;
+  background-color: #F1E9DB;
 }
 
 /* HEADER */
-header {
+.title-container {
   z-index: 999;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
   justify-content: space-between;
   align-items: center;
-  background-color: #F1E9DB;
+  background-color: #5DB7DE;
   height: 5rem;
   box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
 }
@@ -44,18 +52,21 @@ header {
   margin: 0;
 }
 
-.header-title > p:first-of-type {
+.header-title > p:first-of-type > i {
   font-weight: 600;
-  /* color: #716A5C; */
+  color: #F1E9DB;
 }
 
-.header-title > .mobile-subtitle > i {
+.subtitle {
+  display: none;
+}
+
+.mobile-subtitle > i {
   font-weight: 300;
   font-size: 1.5rem;
-  color: #716A5C;
+  color: #F1E9DB;
 }
 
-/* MOBILE MENU START*/
 .mobile-menu {
   margin-right: 20px;
   margin-top: 0.4rem;
@@ -63,42 +74,49 @@ header {
 
 .navigation-menu {
   display: none;
-  background-color: #F1E9DB;
+  background-color: #5DB7DE;
   box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
 }
-/* MOBILE MENU END*/
+
 ul {
   display: flex;
   list-style: none;
   padding: 0;
 }
 
-ul.main-links {
-  margin-bottom: 1.5rem;
+.main-links {
   flex-direction: column;
-
+  margin-bottom: 1.5rem;
 }
 
-ul.extra-links {
-  margin-bottom: 1.5rem;
-  gap: 2rem;
+.extra-links {
   justify-content: space-evenly;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .main-links>li {
-  border-bottom: 1px solid rgba(113, 106, 92, .2); /* Variation of #716A5C to reduce opacity of border*/
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  border-bottom: 1px solid rgba(113, 106, 92, .2); /* Variation of #716A5C to reduce opacity of border*/
 }
 
-.extra-links>li {
+.main-links>li:nth-of-type(3) {
+  border-bottom: none;
+}
 
+.main-links>li>a {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 li > a {
   text-decoration: none;
-  color: #716A5C;
+  color: #F1E9DB;
   font-size: 1.25rem;
   font-weight: 400;
 }
@@ -107,12 +125,98 @@ li > a {
 
 /* 
 
-DESKTOP MEDIA QUERY
+DESKTOP/LANDSCAPE TABLET MEDIA QUERY
 
 https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    flex-direction: row;
+  }
+
   /* HEADER START */
+  header {
+    color: #716A5C;
+    background-color: #5DB7DE;
+    display: flex;
+    flex-direction: column;
+    flex-grow: unset;
+    justify-content: space-between;
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
+  }
+
+  .title-container {
+    box-shadow: none;
+    flex-grow: unset;
+    margin: 15px;
+  }
+
+  .header-title {
+    margin: auto;
+    flex-direction: column;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  .mobile-subtitle {
+    display: none;
+  }
+
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subtitle>p {
+    font-size: 1rem;
+    color: #F1E9DB;
+  }
+
   .mobile-menu {
     display: none;
+  }
+
+  .navigation-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    box-shadow: none;
+  }
+
+  .main-links {
+    margin-bottom: 4rem;
+  }
+
+  .extra-links {
+    position: absolute;
+    bottom: 0;
+    gap: 1.75rem;
+    margin-bottom: 1rem
+  }
+
+  .main-links>li {
+    border-bottom: none;
+  }
+
+  .main-links>li>a {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+
+  a:hover {
+    opacity: .6;
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+  }
+  /* HEADER END */
+
+  article {
+
   }
 }

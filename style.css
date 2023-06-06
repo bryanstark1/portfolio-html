@@ -277,10 +277,6 @@ justify-content: center;
 
 
 
-
-
-
-
 /* 
 
 DESKTOP/LANDSCAPE TABLET MEDIA QUERY
@@ -413,5 +409,14 @@ article.about {
   color: #D9DCD6;
   font-style: italic;
 }
+/* ========== ABOUT PAGE END ========== */
+
+
+/* ========== ABOUT PAGE START ========== */
+
+iframe {
+  height: 90%;
+}
+
 /* ========== ABOUT PAGE END ========== */
 }

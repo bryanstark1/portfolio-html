@@ -19,7 +19,7 @@ $(() => {
 
   // Initialize total number of images in carousel (as indexes of an array)
   const numOfIndexes = $('.carousel-images').children().length - 1;
-  
+
   // .children.eq behaves like an array with indexes starting from 0
 
   // NEXT BUTTON
@@ -51,5 +51,20 @@ $(() => {
 
 
 // MODAL
+   // Grab element that opens button
+	const $openBtn = $('#email-button');
+  // Grab modal element
+	const $modal = $('#modal');
+  // Grab close button
+	const $closeBtn = $('#close');
 
+  // Open modal on Email Me button click
+  $openBtn.on('click', () => {
+    $modal.css('display', 'flex')
+  });
+
+  // Close modal on close button click
+  $closeBtn.on('click', () => {
+    $modal.css('display', 'none')
+  });
 });

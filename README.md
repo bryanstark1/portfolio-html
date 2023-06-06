@@ -24,3 +24,5 @@ Sky Blue = #81C3D7
 5. Carousel: I utilized the walkthrough from the class repo to create a carousel that matched my portfolio's theme - changing colors, shadows, and hover effects. I also included the changing of the text below the carousel 
 
 6. Encountered an issue with the header after introducing the carousel to the Projects page - header shrunk in width. Applied min-width and max-width properties (201px each) to rectify.
+
+7. Used https://www.geeksforgeeks.org/how-to-embed-pdf-file-using-html/ to figure out how to embed a PDF directly into the HTML - Using an <iframe> element.

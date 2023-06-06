@@ -32,7 +32,7 @@ body {
 
 /* ========== HEADER START ========== */
 header {
-  z-index: 999;
+  z-index: 1;
   position: absolute;
   width: 100%;
 }
@@ -54,9 +54,9 @@ header {
   gap: .35em;
 }
 
-.header-title > p:first-of-type > i {
-  font-weight: 600;
-  color: #16425B;
+.header-title > a {
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .subtitle {
@@ -175,14 +175,16 @@ article > a.section > div {
 /* ========== PROJECTS PAGE START ========== */
 article.projects {
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: unset;
 }
 
 /* ========== CAROUSEL START ========== */
 .carousel-container {
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
+  margin-top: 35%;
+  margin-bottom: 25%;
 }
 
 .carousel-images {
@@ -224,7 +226,7 @@ article.projects {
 }
 
 .carousel-text {
-  margin: 0 25%;
+  margin: 0 15%;
 }
 /* ========== CAROUSEL END ========== */
 /* ========== PROJECTS PAGE END ========== */
@@ -273,6 +275,54 @@ justify-content: center;
   text-decoration: none;
   box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
 }
+/* ========== MODAL START ========== */
+#modal {
+	z-index: 2;
+	display: none;
+  align-items: center;
+  justify-content: center;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#modal-textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+	background-color: #16425B;
+  padding: 2rem;
+	width: 550px;
+	border-radius: 10px;
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
+}
+
+#modal-textbox > h1,
+#modal-textbox > p,
+#modal-textbox > a {
+  color: #D9DCD6;
+  text-align: center;
+}
+
+#modal-textbox > h1 {
+  margin: 1rem;
+}
+
+#close {
+  margin-top: 3rem;
+  text-decoration: none;
+  border: 1px solid #D9DCD6;
+  border-radius: 10px;
+  padding: .5rem;
+}
+
+
+/* ========== MODAL END ========== */
+
 /* ========== ABOUT PAGE END ========== */
 
 
@@ -367,10 +417,6 @@ https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
   a:hover,
   article > a.section:hover {
     opacity: .6;
-  }
-
-  a.section:hover div {
-    color: #81C3D7;
   }
 
   svg {

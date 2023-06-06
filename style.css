@@ -27,16 +27,19 @@ body {
 }
 
 /* HEADER */
-.title-container {
+header {
   z-index: 999;
+  position: absolute;
+  width: 100%;
+}
+
+.title-container {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
   justify-content: space-between;
   align-items: center;
   background-color: #5DB7DE;
-  height: 5rem;
+  height: 6rem;
   box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
 }
 
@@ -44,12 +47,7 @@ body {
   display: flex;
   font-size: 2em;
   margin-left: 1rem;
-  align-items: baseline;
   gap: .35em;
-}
-
-.header-title > p {
-  margin: 0;
 }
 
 .header-title > p:first-of-type > i {
@@ -64,7 +62,7 @@ body {
 .mobile-subtitle > i {
   font-weight: 300;
   font-size: 1.5rem;
-  color: #F1E9DB;
+  color: #716A5C;
 }
 
 .mobile-menu {
@@ -122,6 +120,39 @@ li > a {
 }
 /* HEADER END */
 
+article {
+  z-index: 0;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+  margin-top: 96px;
+}
+
+article > a {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  border: 1px solid black;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+article > a > div {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+.dim {
+  opacity: .6;
+}
 
 /* 
 
@@ -137,12 +168,14 @@ https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
 
   /* HEADER START */
   header {
-    color: #716A5C;
-    background-color: #5DB7DE;
-    display: flex;
+    position: static;
     flex-direction: column;
     flex-grow: unset;
     justify-content: space-between;
+    width: auto;
+    color: #716A5C;
+    background-color: #5DB7DE;
+    display: flex;
     box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
   }
 
@@ -217,6 +250,16 @@ https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
   /* HEADER END */
 
   article {
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0 1rem;
+  }
 
+  article > a {
+    height: 50%;
+  }
+
+  article > a > div {
+    height: 100%;
   }
 }

@@ -13,10 +13,13 @@ $(() => {
 
   // Initialize starting frames
   let currentIndex = 0;
+  
   const $carouselImgs = $('.carousel-images').children();
   const $carouselText = $('.carousel-text').children();
+
   // Initialize total number of images in carousel (as indexes of an array)
   const numOfIndexes = $('.carousel-images').children().length - 1;
+  
   // .children.eq behaves like an array with indexes starting from 0
 
   // NEXT BUTTON

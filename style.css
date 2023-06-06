@@ -1,18 +1,18 @@
 /* 
 COLORS
-Black = #07020D = rgb(7, 2, 13)
-Aero = #5DB7DE
-Alabaster = #F1E9DB
-Khaki = #A39B8B
-Dim Grey = #716A5C
-https://coolors.co/07020d-5db7de-f1e9db-a39b8b-716a5c
+Lapis Lauzuli = #2F6690
+Cerulean = #3A7CA5
+Platinum = #D9DCD6
+Indigo Dye = #16425B
+Sky Blue = #81C3D7
+https://coolors.co/2f6690-3a7ca5-d9dcd6-16425b-81c3d7
 */
 
 
 * {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  color: #07020D;
+  color: #16425B;
 }
 
 html {
@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-color: #F1E9DB;
+  background-color: #D9DCD6;
 }
 
 /* HEADER */
@@ -38,7 +38,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #5DB7DE;
+  background-color: #D9DCD6;
   height: 6rem;
   box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
 }
@@ -52,7 +52,7 @@ header {
 
 .header-title > p:first-of-type > i {
   font-weight: 600;
-  color: #F1E9DB;
+  color: #16425B;
 }
 
 .subtitle {
@@ -62,7 +62,7 @@ header {
 .mobile-subtitle > i {
   font-weight: 300;
   font-size: 1.5rem;
-  color: #716A5C;
+  color: #2F6690;
 }
 
 .mobile-menu {
@@ -72,7 +72,7 @@ header {
 
 .navigation-menu {
   display: none;
-  background-color: #5DB7DE;
+  background-color: #D9DCD6;
   box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
 }
 
@@ -114,7 +114,7 @@ ul {
 
 li > a {
   text-decoration: none;
-  color: #F1E9DB;
+  color: #2F6690;
   font-size: 1.25rem;
   font-weight: 400;
 }
@@ -136,10 +136,12 @@ article > a {
   display: flex;
   flex-grow: 1;
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   align-items: center;
   text-align: center;
   text-decoration: none;
+  box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
+
 }
 
 article > a > div {
@@ -173,8 +175,8 @@ https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
     flex-grow: unset;
     justify-content: space-between;
     width: auto;
-    color: #716A5C;
-    background-color: #5DB7DE;
+    color: #16425B;
+    background-color: #D9DCD6;
     display: flex;
     box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
   }
@@ -203,7 +205,7 @@ https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
 
   .subtitle>p {
     font-size: 1rem;
-    color: #F1E9DB;
+    color: #2F6690;
   }
 
   .mobile-menu {

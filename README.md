@@ -20,3 +20,7 @@ Cerulean = #3A7CA5
 Platinum = #D9DCD6
 Indigo Dye = #16425B
 Sky Blue = #81C3D7
+
+5. Carousel: I utilized the walkthrough from the class repo to create a carousel that matched my portfolio's theme - changing colors, shadows, and hover effects.
+
+6. Encountered an issue with the header after introducing the carousel to the Projects page - header shrunk in width. Applied min-width and max-width properties (201px each) to rectify.

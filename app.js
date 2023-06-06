@@ -1,40 +1,52 @@
 $(() => {
-  // Toggle mobile menu on click
+
+// TOGGLE MOBILE MENU ON CLICK
   $(".mobile-menu").on('click', () => {
     $(".navigation-menu").slideToggle("slow");
-
     $('article').toggleClass('dim')
   });
 
-  // CAROUSEL
+
+
+// CAROUSEL
   // https://github.com/Pickles-GitHub-Classroom/corgi-carousel-bryanstark1
 
-  // Initialize starting frame
-  let currentImgIndex = 0;
+  // Initialize starting frames
+  let currentIndex = 0;
   const $carouselImgs = $('.carousel-images').children();
+  const $carouselText = $('.carousel-text').children();
   // Initialize total number of images in carousel (as indexes of an array)
-  const numOfImages = $('.carousel-images').children().length - 1;
+  const numOfIndexes = $('.carousel-images').children().length - 1;
   // .children.eq behaves like an array with indexes starting from 0
 
-  // Next button
+  // NEXT BUTTON
   $('.next').on('click', () => {
-    $carouselImgs.eq(currentImgIndex).css('display', 'none');
-    if (currentImgIndex < numOfImages) {
-      currentImgIndex++;
+    $carouselImgs.eq(currentIndex).css('display', 'none');
+    $carouselText.eq(currentIndex).css('display', 'none');
+    if (currentIndex < numOfIndexes) {
+      currentIndex++;
     } else {
-      currentImgIndex = 0;
+      currentIndex = 0;
     }
-    $carouselImgs.eq(currentImgIndex).css('display', 'block');
+    $carouselImgs.eq(currentIndex).css('display', 'block');
+    $carouselText.eq(currentIndex).css('display', 'block');
   })
   
-  // Previous button
+  // PREVIOUS BUTTON
   $('.previous').on('click', () => {
-    $carouselImgs.eq(currentImgIndex).css('display', 'none');
-    if (currentImgIndex > 0) {
-      currentImgIndex--;
+    $carouselImgs.eq(currentIndex).css('display', 'none');
+    $carouselText.eq(currentIndex).css('display', 'none');
+    if (currentIndex > 0) {
+      currentIndex--;
     } else {
-      currentImgIndex = numOfImages;
+      currentIndex = numOfIndexes;
     }
-    $carouselImgs.eq(currentImgIndex).css('display', 'block');
+    $carouselImgs.eq(currentIndex).css('display', 'block');
+    $carouselText.eq(currentIndex).css('display', 'block');
    })
+
+
+
+// MODAL
+
 });

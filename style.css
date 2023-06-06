@@ -27,7 +27,7 @@ body {
 }
 
 .dim {
-  opacity: .6;
+  opacity: .4;
 }
 
 /* ========== HEADER START ========== */
@@ -175,6 +175,10 @@ article > a.section > div {
 
 /* ========== PROJECTS PAGE START ========== */
 
+article.projects {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 /* ========== CAROUSEL START ========== */
 .carousel-container {
@@ -190,17 +194,18 @@ article > a.section > div {
 	border-radius: 10px;
 	box-sizing: border-box;
   box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
-
 }
 
-.carousel-images img {
+.carousel-images img,
+.carousel-text .card {
 	width: 100%;
 	border-radius: 10px;
 	display: none;
   color: #D9DCD6;
 }
 
-.carousel-images img:first-of-type {
+.carousel-images img:first-of-type,
+.carousel-text .card:first-of-type {
   display: block;
 }
 
@@ -218,6 +223,10 @@ article > a.section > div {
 .carousel-button:hover {
 	cursor: pointer;
 	color: white;
+}
+
+.carousel-text {
+  margin: 0 25%;
 }
 /* ========== CAROUSEL END ========== */
 
@@ -244,7 +253,8 @@ https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
     flex-direction: column;
     flex-grow: unset;
     justify-content: space-between;
-    width: auto;
+    min-width: 201px;
+    max-width: 201px;
     color: #16425B;
     background-color: #D9DCD6;
     display: flex;

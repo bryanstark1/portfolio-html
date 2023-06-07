@@ -26,3 +26,5 @@ Sky Blue = #81C3D7
 6. Encountered an issue with the header after introducing the carousel to the Projects page - header shrunk in width. Applied min-width and max-width properties (201px each) to rectify.
 
 7. Used https://www.geeksforgeeks.org/how-to-embed-pdf-file-using-html/ to figure out how to embed a PDF directly into the HTML - Using an <iframe> element.
+
+8. Attempted to add a custom favicon using https://favicon.io/favicon-generator/. But couldn't figure out how to properly link the file after downloading.

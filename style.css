@@ -49,6 +49,7 @@ header {
 
 .header-title {
   display: flex;
+  align-items: baseline;
   font-size: 2em;
   margin-left: 1rem;
   gap: .35em;
@@ -57,15 +58,17 @@ header {
 .header-title > a {
   text-decoration: none;
   font-weight: 500;
+  font-style: italic;
 }
 
 .subtitle {
   display: none;
 }
 
-.mobile-subtitle > i {
+.mobile-subtitle {
   font-weight: 300;
   font-size: 1.5rem;
+  font-style: italic;
   color: #2F6690;
 }
 
@@ -166,6 +169,7 @@ article > a.section > div {
   align-items: center;
   justify-content: center;
   font-style: italic;
+  font-size: 1.35rem;
   color: #D9DCD6;
 }
 /* ========== HOME PAGE END ========== */
@@ -175,7 +179,9 @@ article > a.section > div {
 /* ========== PROJECTS PAGE START ========== */
 article.projects {
   flex-direction: column;
-  justify-content: unset;
+  justify-content: flex-start;
+  margin-top: 25%;
+  gap: 3rem;
 }
 
 /* ========== CAROUSEL START ========== */
@@ -183,8 +189,6 @@ article.projects {
 	width: 100%;
 	display: flex;
 	justify-content: center;
-  margin-top: 250px;
-  margin-bottom: 115px;
 }
 
 .carousel-images {
@@ -229,7 +233,9 @@ article.projects {
   margin: 0 15%;
 }
 /* ========== CAROUSEL END ========== */
+
 /* ========== PROJECTS PAGE END ========== */
+
 
 
 /* ========== ABOUT PAGE START ========== */
@@ -275,6 +281,7 @@ justify-content: center;
   text-decoration: none;
   box-shadow: 0px 1px 10px 0px rgba(0,0,0,.2);
 }
+
 /* ========== MODAL START ========== */
 #modal {
 	z-index: 2;
@@ -319,30 +326,27 @@ justify-content: center;
   border-radius: 10px;
   padding: .5rem;
 }
-
-
 /* ========== MODAL END ========== */
 
 /* ========== ABOUT PAGE END ========== */
 
 
-/* ========== RESUME PAGE START ========== */
 
 
 
-/* ========== RESUME PAGE END ========== */
 /* 
 
 DESKTOP/LANDSCAPE TABLET MEDIA QUERY
 
-https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
+https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp
+
+*/
 
 @media only screen and (min-width: 768px) {
 
   body {
     flex-direction: row;
   }
-
 
   /* ========== HEADER START========== */
   header {
@@ -462,15 +466,15 @@ article.about {
 /* ========== ABOUT PAGE END ========== */
 
 
-/* ========== ABOUT PAGE START ========== */
+/* ========== RESUME PAGE START ========== */
 iframe {
   height: 90%;
 }
-/* ========== ABOUT PAGE END ========== */
+/* ========== RESUME PAGE END ========== */
 
-/* ========== RESUME PAGE START ========= */
-.carousel-container {
-  margin-top: 400px;
+/* ========== PROJECTS PAGE START ========= */
+article.projects {
+  margin-top: 10%;
 }
-/* ========== RESUME PAGE END ========= */
+/* ========== PROJECTS PAGE END ========= */
 }

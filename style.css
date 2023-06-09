@@ -189,6 +189,7 @@ article.projects {
 	width: 100%;
 	display: flex;
 	justify-content: center;
+  margin-top: 5rem;
 }
 
 .carousel-images {
@@ -479,6 +480,10 @@ iframe {
 /* ========== PROJECTS PAGE START ========= */
 article.projects {
   margin-top: 10%;
+}
+
+.carousel-container {
+  margin-top: 0;
 }
 /* ========== PROJECTS PAGE END ========= */
 }

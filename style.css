@@ -484,6 +484,7 @@ article.projects {
 
 .carousel-container {
   margin-top: 0;
+  max-width: 1000px;
 }
 /* ========== PROJECTS PAGE END ========= */
 }
